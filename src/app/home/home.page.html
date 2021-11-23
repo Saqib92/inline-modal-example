@@ -12,7 +12,12 @@
   </ion-header>
   <ion-button (click)="isModalOpen = true">Open Modal</ion-button>
 </ion-content>
-<ion-modal [isOpen]="isModalOpen" (didDismiss)="isModalOpen = false">
+<ion-modal
+  class="full-modal"
+  [isOpen]="isModalOpen"
+  (didDismiss)="isModalOpen = false"
+  [swipeToClose]="true"
+>
   <ng-template>
     <app-inline-modal></app-inline-modal>
   </ng-template>
